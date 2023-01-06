@@ -1,0 +1,154 @@
+:root {
+    --red: #F05454;
+    --light-red: #df6767;
+    --dark-blue: #0077C0;
+    --light-blue: #C7EEFF;
+    --black: #121212;
+    --white: #F5F5F5;
+}
+
+/* general style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.err-msg {
+    opacity: 0;
+    font-size: 1.2rem;
+    padding: .4rem .8rem;
+    color: var(--red);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    height: 100vh;
+    padding: 1rem 1.6rem;
+    background: linear-gradient(to right, #AFF1DA, #F9EA8F);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.dices-number,
+.dice-type {
+    margin-bottom: 1.5rem;
+}
+
+.number-of-dice,
+.btn-roll {
+    font-size: 1.3rem;
+    padding: .4rem .8rem;
+    border-radius: .3rem;
+    border: none;
+}
+
+.number-of-dice {
+    font-size: 1.1rem;
+    width: 24rem;
+    height: 2.5rem;
+    outline: none;
+}
+
+.btn-roll,
+#type-of-dice {
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: 700;
+    padding: .8rem 1.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-roll:hover {
+    background-color: var(--light-red);
+}
+
+#type-of-dice {
+    font-size: 1.6rem;
+    padding: .25rem .5rem;
+}
+
+.dice-roler {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.btn-roll {
+    margin-left: .4rem;
+}
+
+.num-of-dice-rolled,
+.type-of-dice-rolled,
+.total-score {
+    font-size: 1.6rem;
+    padding: .4rem .3rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+label {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.individual-score {
+    text-align: center;
+}
+
+.individual-score p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.individual-score img {
+    width: 5rem;
+    margin-left: .3rem;
+}
+
+/* spinner  */
+.spinner {
+    text-align: center;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: var(--red) transparent var(--red) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
