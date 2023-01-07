@@ -98,7 +98,8 @@ myForm.addEventListener("submit", (e) => {
 	totalScore.innerHTML = "";
 	if (
 		!Number.isInteger(Number(numOfDice.value)) ||
-		Number(numOfDice.value) < 1
+		Number(numOfDice.value) < 1 ||
+		Number(numOfDice.value) > 20
 	) {
 		errMsg.style.opacity = "1";
 		return;
